@@ -180,12 +180,12 @@ def who_is_it(image, database, model):
 
 
 if __name__ == "__main__":
-    # model = facenetModel(input_shape=(3, 96, 96))
+    model = facenetModel(input_shape=(3, 96, 96))
     # model.compile(optimizer='adam', loss=triplet_loss, metrics=['accuracy'])
-    # load_weight(model)
-    # model.save('model.h5')
+    load_weight(model)
+    model.save('model.h5')
 
-    model = keras.models.load_model('model.h5')
+    # model = keras.models.load_model('model.h5')
 
     # keras.utils.print_summary(model)
 
