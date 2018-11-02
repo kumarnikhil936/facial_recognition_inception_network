@@ -23,18 +23,10 @@ def main():
         name = input("Enter Name: ")
         face_id = input("Enter id for this face: ")
 
-        try:
+        face_folder = 'database/' + str(face_id) + "/"
+        create_folder(face_folder)
+        break
 
-            face_id = int(face_id)
-            face_folder = 'database/' + str(face_id) + "/"
-
-            create_folder(face_folder)
-
-            break
-
-        except:
-            print("Invalid input. id must be int")
-            continue
 
     while True:
         init_img_no = input("Starting img no. (should be a int): ")
